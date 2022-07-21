@@ -9,6 +9,7 @@
     - [¿Qué es Full Stack? 4/55](#qué-es-full-stack-455)
     - [Páginas Estáticas vs. Dinámicas 5/55](#páginas-estáticas-vs-dinámicas-555)
     - [HTML: anatomía de una página web 6/55](#html-anatomía-de-una-página-web-655)
+    - [Index y su estructura básica: head 7/55](#index-y-su-estructura-básica-head-755)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -204,3 +205,47 @@ HTML son siglas que corresponden a Hyper Text Markup Language (Lenguaje de Marca
 - Markup significa que le pone etiquetas a los elementos. Por eso también se le conoce como un lenguaje de etiquetas.
 
 HTML es un lenguaje interpretado. Además, HTML es un estándar, así que no importa desde qué navegador o dispositivo se ejecute, el código sigue siendo el mismo en cualquier sitio.
+
+---
+### Index y su estructura básica: head 7/55
+
+El primer archivo de mi proyecto siempre debe llamarse index.html porque el navegador va a buscar ese archivo, de otra forma tendría que indicarle al navegador cuál es el archivo que debe abrir.
+
+~~~
+/* La etiqueda DOCTYPE html sirve para decirle al navegador
+que está leyendo html 5 y que debe interpretar todo como html 5 */
+<!DOCTYPE html>
+
+// La etiqueda html delimita todo el proyecto, todo estará dentro de ella
+// lang es un atributo que indica el idioma que tiene el proyecto al navegador
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+
+        /* el atributo description sirve para dar información sobre la 
+        página cuando se busca en internet */
+        <meta name="description" content="Esta página te mostrará fotos de gatos" />
+
+        /* el atributo robots sirve para que los robots en internet tengan
+        acceso a nuestra página y puedan buscarla como por ejemplo el robot de
+        google o de algún otro buscador, se utiliza luego el atributo 
+        content="index, follow" para que puedan hacerlo, si quisieramos que no
+        lo hicieran seria unfollow*/
+        <meta name="robots" content="index,follow" />
+        <title>Es mi página</title>
+
+        /* el meta viewport sirve para que la página web pueda escalar
+        con la pantalla que tenga el usuario ya sea una computadora o
+        un telefono*/ 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        /* la etiqueta link sirve para agregar nuestro css al html,
+        el atributo rel sirve para decirle que es una hoja de estilos y href sirve
+        para decirle donde se encuentra esa hoja de estilos */
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+    </body>
+</html>
+~~~
