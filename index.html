@@ -1,36 +1,57 @@
-/* La etiqueda DOCTYPE html sirve para decirle al navegador
-que está leyendo html 5 y que debe interpretar todo como html 5 */
+<!-- La etiqueda DOCTYPE html sirve para decirle al navegador
+que está leyendo html 5 y que debe interpretar todo como html 5 -->
 <!DOCTYPE html>
 
-// La etiqueda html delimita todo el proyecto, todo estará dentro de ella
-// lang es un atributo que indica el idioma que tiene el proyecto al navegador
+<!-- La etiqueda html delimita todo el proyecto, todo estará dentro de ella -->
+<!-- lang es un atributo que indica el idioma que tiene el proyecto al navegador -->
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
 
-        /* el atributo description sirve para dar información sobre la 
-        página cuando se busca en internet */
+        <!-- el atributo description sirve para dar información sobre la 
+        página cuando se busca en internet -->
         <meta name="description" content="Esta página te mostrará fotos de gatos" />
 
-        /* el atributo robots sirve para que los robots en internet tengan
+        <!-- el atributo robots sirve para que los robots en internet tengan
         acceso a nuestra página y puedan buscarla como por ejemplo el robot de
         google o de algún otro buscador, se utiliza luego el atributo 
         content="index, follow" para que puedan hacerlo, si quisieramos que no
-        lo hicieran seria unfollow*/
+        lo hicieran seria unfollow -->
         <meta name="robots" content="index,follow" />
         <title>Es mi página</title>
 
-        /* el meta viewport sirve para que la página web pueda escalar
+        <!-- el meta viewport sirve para que la página web pueda escalar
         con la pantalla que tenga el usuario ya sea una computadora o
-        un telefono*/ 
+        un telefono -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        /* la etiqueta link sirve para agregar nuestro css al html,
+        <!-- la etiqueta link sirve para agregar nuestro css al html,
         el atributo rel sirve para decirle que es una hoja de estilos y href sirve
-        para decirle donde se encuentra esa hoja de estilos */
+        para decirle donde se encuentra esa hoja de estilos -->
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        <header>
+            <nav></nav>
+        </header>
+        <main>
+            <section>
+                <article>
 
+                </article>
+            </section>
+            <ul> <!-- La etiqueta ul crea una lista desordenada -->
+                <li>Soy una manzana</li> <!-- li lleva los elementos de la lista -->
+            </ul>
+            <ol> <!-- ol crea una lista ordenada -->
+                <li>Soy una manzana</li>
+            </ol>
+        </main>
+        <footer>
+            
+        </footer>
+        <p>Soy un texto</p>
+        <h1>Soy un título</h1>
+        <a href="#">Soy un link</a>
     </body>
 </html>
