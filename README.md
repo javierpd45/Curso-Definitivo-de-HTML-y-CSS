@@ -12,6 +12,7 @@
     - [Index y su estructura básica: head 7/55](#index-y-su-estructura-básica-head-755)
     - [Index y su estructura básica: body 8/55](#index-y-su-estructura-básica-body-855)
       - [Etiquetas del cuerpo del documento (body):](#etiquetas-del-cuerpo-del-documento-body)
+    - [Reto: crea tu lista de compras del supermercad 9/55](#reto-crea-tu-lista-de-compras-del-supermercad-955)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -327,4 +328,27 @@ Semántica de HTML:
     <!--Enlaces/links que nos permitirán movernos entre páginas.-->
 
   </body>
+~~~
+
+### Reto: crea tu lista de compras del supermercad 9/55
+
+~~~
+<h1>Lista para el súper</h1>
+<ul> <!-- La etiqueta ul crea una lista desordenada -->
+  <li>Frutas</li> <!-- li lleva los elementos de la lista -->
+  <ol> <!-- ol crea una lista ordenada -->
+    <a href="https://www.google.com/search?client=opera&q=pai+de+manzana&sourceid=opera&ie=UTF-8&oe=UTF-8" target="_blank"><li>manzana</li></a>
+    <a href="https://www.google.com/search?q=magu+de+platano&client=opera&hs=CuN&sxsrf=ALiCzsZ9tx9owq81vOh6eZYX3GaZ4yRCSA%3A1658521705474&ei=aQjbYvioHKLYkvQP1ICpoAE&ved=0ahUKEwi4ge3oqo35AhUirIQIHVRAChQQ4dUDCA0&uact=5&oq=magu+de+platano&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEA0yBAgAEA0yBAgAEA0yBggAEB4QDTIICAAQHhANEAoyBggAEB4QDTIGCAAQHhANMgYIABAeEA0yBggAEB4QDTIGCAAQHhANOgcIABBHELADOgcIABCwAxBDOgwILhDIAxCwAxBDGAE6BAgjECc6BQgAEJECOggILhDUAhCRAjoLCC4QgAQQxwEQ0QM6BQgAEIAEOgUILhCABDoFCC4QkQI6BwguEIAEEAo6BwgAEAoQywE6BQguEMsBOgcIABCABBAKOgUIABDLAToHCC4QChDLAToLCC4QgAQQxwEQrwFKBAhBGABKBAhGGABQrh9YiTpg1DtoBHABeACAAaYBiAGEEJIBBDAuMTaYAQCgAQHIAQvAAQHaAQQIARgI&sclient=gws-wiz" target="_blank"><li>Plátano</li></a>
+    <a href="https://www.google.com/search?client=opera&q=jugo+de+limon&sourceid=opera&ie=UTF-8&oe=UTF-8" target="_blank"><li>Limón</li></a>
+  </ol>
+  <li>Carnes</li>
+  <ol>
+    <a href="https://www.google.com/search?q=pollo+al+carbon+receta&client=opera&hs=KM3&sxsrf=ALiCzsZ-uSvLBEm_ZMYF-KMWxR8xHeimzw%3A1658522171736&ei=OwrbYobWK_aykvQPzautwAc&oq=pollo+al+carbon+rece&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQywEyBQgAEMsBMgYIABAeEBYyBggAEB4QFjIGCAAQHhAWMgYIABAeEBYyBggAEB4QFjIGCAAQHhAWMgYIABAeEBYyBggAEB4QFjoHCAAQRxCwAzoKCAAQRxCwAxDJAzoICAAQkgMQsAM6DAguEMgDELADEEMYAToSCC4QxwEQrwEQyAMQsAMQQxgBOg8ILhDUAhDIAxCwAxBDGAE6EgguEMcBENEDEMgDELADEEMYAToHCAAQyQMQQzoFCAAQkgM6BAgAEEM6BQgAEIAEOggIABDJAxDLAUoECEEYAEoECEYYAFC-CFj7DmCEGmgBcAF4AIABeYgBwwSSAQMwLjWYAQCgAQHIAQ3AAQHaAQQIARgI&sclient=gws-wiz" target="_blank"><li>Pollo</li></a>
+    <a href="https://www.google.com/search?q=carne+molida+para+hamburguesa&client=opera&hs=8gi&sxsrf=ALiCzsaptZ6-rYpC1k33ihPnS7yYRErjMw%3A1658522178937&ei=QgrbYo_rOIyNwbkPhv2BiAk&oq=carne+molida+para+am&gs_lcp=Cgdnd3Mtd2l6EAMYADIHCAAQChDLATIGCAAQHhAWMgYIABAeEBYyCggAEB4QDxAWEAoyCAgAEB4QFhAKMgYIABAeEBYyBQgAEIYDMgUIABCGAzoHCAAQRxCwAzoHCAAQsAMQQzoECCMQJzoICC4Q1AIQkQI6BQguEJECOgsILhCABBDHARDRAzoFCAAQgAQ6BQgAEJECOgQIABBDOgQILhBDOgUILhCABDoLCC4QgAQQxwEQrwE6CggAEIAEEIcCEBQ6BQgAEMsBOgUILhDLAToICAAQHhAPEBZKBAhBGABKBAhGGABQ_gpYpEFgtUxoA3ABeACAAZEBiAHHEpIBBDAuMjCYAQCgAQHIAQnAAQE&sclient=gws-wiz" target="_blank"><li>Carne molida</li></a>
+  </ol>
+  <li>Verduras</li>
+  <ol>
+    <a href="https://www.google.com/search?q=carrot+juice&client=opera&hs=0M3&sxsrf=ALiCzsZfs7UPVhBrYt1WP42cueTUqN8a9g%3A1658522213392&ei=ZQrbYsS6F5KHkvQP8MW3uAg&ved=0ahUKEwiEgYbbrI35AhWSg4QIHfDiDYcQ4dUDCA0&uact=5&oq=carrot+juice&gs_lcp=Cgdnd3Mtd2l6EAMyBQguEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCC4QgAQyBQgAEIAEOgcIABBHELADOgQIIxAnOggILhDUAhCRAjoFCC4QkQI6CwguEIAEEMcBENEDOgUIABCRAjoNCC4QgAQQxwEQ0QMQCjoECC4QQzoKCAAQgAQQhwIQFDoFCAAQywE6CAgAEMkDEMsBOgUIABCSA0oECEEYAEoECEYYAFDFFFiYJmDxJmgDcAF4AIAB_wGIAcUMkgEFMC45LjKYAQCgAQHIAQjAAQE&sclient=gws-wiz" target="_blank"><li>Zanahoria</li></a>
+  </ol>
+</ul>
 ~~~
