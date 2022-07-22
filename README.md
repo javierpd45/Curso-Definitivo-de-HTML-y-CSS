@@ -13,6 +13,10 @@
     - [Index y su estructura básica: body 8/55](#index-y-su-estructura-básica-body-855)
       - [Etiquetas del cuerpo del documento (body):](#etiquetas-del-cuerpo-del-documento-body)
     - [Reto: crea tu lista de compras del supermercad 9/55](#reto-crea-tu-lista-de-compras-del-supermercad-955)
+    - [Anatomía de una etiqueta de HTML 10/55](#anatomía-de-una-etiqueta-de-html-1055)
+    - [Tipos de imágenes 11/55](#tipos-de-imágenes-1155)
+      - [Tipos de imágenes para web](#tipos-de-imágenes-para-web)
+      - [Formatos de imagen para web](#formatos-de-imagen-para-web)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -330,6 +334,7 @@ Semántica de HTML:
   </body>
 ~~~
 
+---
 ### Reto: crea tu lista de compras del supermercad 9/55
 
 ~~~
@@ -352,3 +357,47 @@ Semántica de HTML:
   </ol>
 </ul>
 ~~~
+
+---
+### Anatomía de una etiqueta de HTML 10/55
+
+Una etiqueta HTML puede tener tantos atributos como desees, y cada atributo tiene su propia función. En el siguiente ejemplo, veremos la forma en la que se compone una etiqueta HTML:
+
+![Anatomia de una etiqueta](https://i.postimg.cc/k4s9SqbT/Anatom-a-de-Etiqueta.png)
+
+![Tag anatomy](https://static.platzi.com/media/user_upload/anatomia%20de%20html-fc475d3a-6d91-41b5-a893-ee4790dcb637.jpg)
+
+- No todas las etiquetas llevan una etiqueta de cierre. Las que llevan un cierre son aquellas que albergan un contenido que nos dice a dónde nos va a llevar (nombre de la página, nombre del link).
+- Lo que va dentro de la etiqueta de apertura es un atributo (nombre del atributo = href y el valor del atributo es la url).
+- El contenido + la etiqueta = Elemento
+
+---
+### Tipos de imágenes 11/55
+
+Las imágenes representan una pieza fundamental al momento de mostrar contenido para web. Aquí conoceremos los principales tipos de imágenes web y sus formatos.
+
+#### Tipos de imágenes para web
+
+**Lossless (sin pérdida):**
+
+- Capturan todos los datos del archivo original.
+- No se pierde nada del archivo original.
+- Puede comprimirse, pero podrá reconstruir su imagen al estado original
+
+**Lossy (con pérdida):**
+
+- Se aproximan a su imagen original.
+- Podría reducir la cantidad de colores en su imagen o analizar la imagen en busca de datos innecesarios.
+- Por consiguiente puede reducir su tamaño, lo que mejora el tiempo de carga de la página, pero pierde su calidad.
+- Los archivos tipo lossy son mucho más livianos que los archivos tipo lossless, por lo que son ideales para usar en sitios en donde el tamaño del archivo y la velocidad de descarga son importantes.
+
+![](https://static.platzi.com/media/user_upload/table%20for%20diferent%20images-42fdf349-a492-4ff5-afbd-1f437c804e4a.jpg)
+
+#### Formatos de imagen para web
+
+- **GIF** (Graphics Interchange Format): Formato de imagen sin pérdida, no se puede comprimir
+- **PNG 8** (Portable Network Graphics): Formato de imagen sin pérdida, uso de colores de 256, se utiliza para logotipos e iconos para la página.
+- **PNG 24** (Portable Network Graphics): Formato de imagen sin pérdida, utilización de colores ilimitados, alta calidad, si intentamos comprimir no ayudará demasiado por la gran cantidad de colores.
+- **JPG / JPEG** (Photographic Experts Group): Formato de imagen con pérdida, perdemos calidad a la hora de comprimirlas, pero llegan a ser óptimas para la carga en la página web.
+- **SVG - Vector** (Scalable Vector Graphics): Formato de imagen muy ligero sin pérdida, con svg no perdemos calidad, ya que está compuesta por vectores.
+- **WebP**: Es un formato gráfico en forma de contenedor que sustenta tanto compresión con pérdida como sin ella. ​​Fue desarrollado por Google.
