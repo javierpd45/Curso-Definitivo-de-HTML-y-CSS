@@ -17,6 +17,8 @@
     - [Tipos de imágenes 11/55](#tipos-de-imágenes-1155)
       - [Tipos de imágenes para web](#tipos-de-imágenes-para-web)
       - [Formatos de imagen para web](#formatos-de-imagen-para-web)
+    - [Optimización de imágenes 12/55](#optimización-de-imágenes-1255)
+    - [Etiqueta img 13/55](#etiqueta-img-1355)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -401,3 +403,20 @@ Las imágenes representan una pieza fundamental al momento de mostrar contenido 
 - **JPG / JPEG** (Photographic Experts Group): Formato de imagen con pérdida, perdemos calidad a la hora de comprimirlas, pero llegan a ser óptimas para la carga en la página web.
 - **SVG - Vector** (Scalable Vector Graphics): Formato de imagen muy ligero sin pérdida, con svg no perdemos calidad, ya que está compuesta por vectores.
 - **WebP**: Es un formato gráfico en forma de contenedor que sustenta tanto compresión con pérdida como sin ella. ​​Fue desarrollado por Google.
+
+---
+### Optimización de imágenes 12/55
+
+Una imagen en la web en promedio debe pesar 70Kb.
+
+**Opciones para trabajar las imágenes**
+
+- Mejora el tamaño de tus imágenes
+  - [Tiny PNG](https://tinypng.com) funciona para jpg y para png.
+
+- Retira metadatos de tus imágenes
+  - [Verexif](https://www.verexif.com) normalmente usada para imagenes tomadas con cámaras o teléfonos.
+
+---
+### Etiqueta img 13/55
+
