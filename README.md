@@ -19,6 +19,8 @@
       - [Formatos de imagen para web](#formatos-de-imagen-para-web)
     - [Optimización de imágenes 12/55](#optimización-de-imágenes-1255)
     - [Etiqueta img 13/55](#etiqueta-img-1355)
+    - [Etiqueta figure 14/55](#etiqueta-figure-1455)
+    - [Etiqueta video 15/55](#etiqueta-video-1555)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -449,3 +451,56 @@ alt sirve para agregar una descripción a nuestra imagen. Esto es útil por cues
   - `<img/>`, a diferencia de la gran mayoría de las demás etiquetas de HMTL, no necesita una etiqueta de cierre.
 
 Imágenes gratuitas que se pueden descargar por tamaños en [Pexels](https://www.pexels.com/es-es/).
+
+---
+### Etiqueta figure 14/55
+
+`Figure` es una etiqueta que permite almacenar una imagen en su interior. Es una mejor práctica comparada con usar solamente un contenedor `div`. Como complemento al contenedor `figure`, se utiliza la etiqueta `figcaption` 
+, que permite darle una pequeña descripción a la imagen, como el autor, fuente o algo por el estilo, que se mostrará usualmente abajo de la imagen.
+
+`Figcaption` se diferencia del atributo `Alt` porque esta última muestra su descripción en texto en el navegador solamente cuando no hay una imágen.
+
+Es importante considerar que la etiqueta figure no es únicamente para imágenes:
+
+[El elemento HTML](https://platzi.com/clases/1802-accesibilidad-web/26072-que-es-el-html-semantico-y-por-que-es-importante/) representa contenido independiente, a menudo con un título. Por lo general, se trata de una imagen, una ilustración, un diagrama, un fragmento de código, o un esquema al que se hace referencia en el texto principal, pero que se puede mover a otra página o a un apéndice sin que afecte al flujo principal.
+
+**Ejemplo de etiqueta Figure:**
+
+```
+<figure>
+          <img
+            src="./pics/tinified/small.jpg"
+            alt="Es una imagen de un perrito"
+          />
+          <figcaption>Es una imagen de un perritofigcaption>  
+figure>
+```
+
+---
+### Etiqueta video 15/55
+
+La etiqueta `video` se utiliza como bien dice su nombre para colocar videos dentro de ella. Esta etiqueta tiene varios atributos y también otra etiqueta que se puede usar dentro de ella.
+
+Atributos de la etiqueta `video`:
+
+- `src` sirve para darle la dirección del video al navegador. Si quetemos que el video empiece a correr desde un punto específico y se detenga en un punto específico podemos utilizar el símbolo de número **#**, luego `t=10,60` esto hará que el video empiece en el segundo 10 y se detenga en el segundo 60.
+
+- `controls` sirve para añadirle botones al video y que se pueda reproducir, además este atributo no lleva nada dentro (no lleva ningún valor).
+
+- `preload` con el valor `auto` sirve para que el video cargue más rápido, el video se empieza a renderizar cuando la página se empieza a crear en el navegador y el usuario no tenga que esperar tanto para poder reproducirlo. Este atributo no sirve para que se empiece a reproducir solo.
+
+La etiqueta `<source>` se utiliza dentro de la etiqueta de video y sirve para reemplazar el atributo `src` esto sirve para cuando queremos asegurarnos de que el navegador va a correr el video, es decir que el navegador pueda correr la extensión de video que le pongamos. por ejemplo: .mp4 .mv4 etc, estas son extensiones de videos y puede ser que algún navegador no corra una pero si la otra.
+
+```
+<body>
+    <main>
+        <section>
+            <video controls preload="auto">
+                <source src="./claseVideoPrueba.m4v#t=2,4">
+                <source src="./claseVideoPrueba.mp4#t=2,4">
+            </video>
+        </section>
+    </main>
+</body>
+```
+
