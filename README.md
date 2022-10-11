@@ -21,6 +21,9 @@
     - [Etiqueta img 13/55](#etiqueta-img-1355)
     - [Etiqueta figure 14/55](#etiqueta-figure-1455)
     - [Etiqueta video 15/55](#etiqueta-video-1555)
+    - [Etiqueta form e input 16/55](#etiqueta-form-e-input-1655)
+    - [Calendar 17/55](#calendar-1755)
+    - [Autocomplete y require 18/55](#autocomplete-y-require-1855)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -504,3 +507,128 @@ La etiqueta `<source>` se utiliza dentro de la etiqueta de video y sirve para re
 </body>
 ```
 
+---
+### Etiqueta form e input 16/55
+
+```
+<body>
+    <form action="">
+        <label for="nombre">
+            <span>¿Cuál es tu nombre?</span>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+        </label>
+        <label for="Inicio-platzi">
+            <span>¿Qué día comenzaste en Platzi?</span>
+            <input type="date" id="Inicio-platzi">
+        </label>
+        <label for="horario">
+            <span>¿En qué horario estudias?</span>
+            <input type="time" id="horario">
+        </label>
+    </form>
+</body>
+```
+
+**HTML [Input Types](https://www.w3schools.com/html/html_form_input_types.asp)**
+
+Here are the different input types you can use in HTML:
+
+```
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+```
+
+---
+### Calendar 17/55
+
+[Input documentación y resumen](https://developer.mozilla.org/es/docs/Web/HTML/Element/input)
+
+En ***vs code*** con windows se puede comentar un gran bloque de texto seleccionandolo y luego con las teclas `Ctrl+k + Ctrl+c`
+
+El atributo de submit en input sirve para enviar la información de un formulario, incluso agrega el botón de enviar en el navegador.
+`<input type"submit">`
+
+```
+<form action="">
+        <label for="hora">
+            <span>Hora</span>
+            <input type="time" id="hora" name="hora">
+        </label>
+        <label for="dia">
+            <span>Día</span>
+            <input type="date" id="dia" name="dia">
+        </label>
+        <label for="semana">
+            <span>Semana</span>
+            <input type="week" id="semana" name="semana">
+        </label>
+        <label for="mes">
+            <span>Mes</span>
+            <input type="month" id="mes" name="mes">
+        </label>
+        <input type="submit">
+    </form>
+```
+
+```
+<form action="">
+        <label for="calendario">
+            <span>Calendario</span>
+            <input type="datetime-local" id="calendario" name="calendario">
+        </label>
+        <input type="submit">
+    </form>
+```
+
+---
+### Autocomplete y require 18/55
+
+`autocomplete` es un atributo que nos auto-completa las casillas siempre y cuando el navegador ya tenga esa información.
+
+`required` es un atributo que no nos deja enviar el formulario hasta haber completado las casillas que tengan este atributo.
+
+```
+<body>
+   <main>
+    <form action="">
+        <label for="nombre">
+            <span>¿Cuál es tu nombre?</span>
+            <input type="text" name="nombre" id="nombre" autocomplete="name" required/>
+        </label>
+        <label for="correo">
+            <span>¿Cuál es tu correo?</span>
+            <input type="email" name="correo" id="correo" autocomplete="email" required/>
+        </label>
+        <label for="pais">
+            <span>¿En qué país vives?</span>
+            <input type="text" name="pais" id="pais" autocomplete="country" required/>
+        </label>
+        <label for="cp">
+            <span>¿Cuál es tu código postal?</span>
+            <input type="text" name="cp" id="cp" autocomplete="postal-code" required/>
+        </label>
+        <input type="submit" />
+    </form>
+   </main>
+</body>
+```
