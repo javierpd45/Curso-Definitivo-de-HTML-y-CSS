@@ -24,6 +24,7 @@
     - [Etiqueta form e input 16/55](#etiqueta-form-e-input-1655)
     - [Calendar 17/55](#calendar-1755)
     - [Autocomplete y require 18/55](#autocomplete-y-require-1855)
+    - [Select 19/55](#select-1955)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -471,13 +472,21 @@ Es importante considerar que la etiqueta figure no es únicamente para imágenes
 
 ```
 <figure>
-          <img
-            src="./pics/tinified/small.jpg"
-            alt="Es una imagen de un perrito"
-          />
-          <figcaption>Es una imagen de un perritofigcaption>  
+  <img
+  src="./pics/tinified/small.jpg"
+  alt="Es una imagen de un perrito"
+  />
+  <figcaption>Es una imagen de un perritofigcaption>  
 figure>
 ```
+
+<figure>
+  <img
+  src="./pics/tinified/small.jpg"
+  alt="Es una imagen de un perrito"
+  />
+  <figcaption>Es una imagen de un perrito</figcaption>  
+</figure>
 
 ---
 ### Etiqueta video 15/55
@@ -512,20 +521,20 @@ La etiqueta `<source>` se utiliza dentro de la etiqueta de video y sirve para re
 
 ```
 <body>
-    <form action="">
-        <label for="nombre">
-            <span>¿Cuál es tu nombre?</span>
-            <input type="text" id="nombre" placeholder="Tu nombre">
-        </label>
-        <label for="Inicio-platzi">
-            <span>¿Qué día comenzaste en Platzi?</span>
-            <input type="date" id="Inicio-platzi">
-        </label>
-        <label for="horario">
-            <span>¿En qué horario estudias?</span>
-            <input type="time" id="horario">
-        </label>
-    </form>
+  <form action="">
+    <label for="nombre">
+      <span>¿Cuál es tu nombre?</span>
+      <input type="text" id="nombre" placeholder="Tu nombre">
+    </label>
+    <label for="Inicio-platzi">
+      <span>¿Qué día comenzaste en Platzi?</span>
+      <input type="date" id="Inicio-platzi">
+    </label>
+    <label for="horario">
+      <span>¿En qué horario estudias?</span>
+      <input type="time" id="horario">
+    </label>
+  </form>
 </body>
 ```
 
@@ -570,35 +579,63 @@ El atributo de submit en input sirve para enviar la información de un formulari
 
 ```
 <form action="">
-        <label for="hora">
-            <span>Hora</span>
-            <input type="time" id="hora" name="hora">
-        </label>
-        <label for="dia">
-            <span>Día</span>
-            <input type="date" id="dia" name="dia">
-        </label>
-        <label for="semana">
-            <span>Semana</span>
-            <input type="week" id="semana" name="semana">
-        </label>
-        <label for="mes">
-            <span>Mes</span>
-            <input type="month" id="mes" name="mes">
-        </label>
-        <input type="submit">
-    </form>
+  <label for="hora">
+    <span>Hora</span>
+    <input type="time" id="hora" name="hora">
+  </label>
+  <label for="dia">
+    <span>Día</span>
+    <input type="date" id="dia" name="dia">
+  </label>
+  <label for="semana">
+    <span>Semana</span>
+    <input type="week" id="semana" name="semana">
+  </label>
+  <label for="mes">
+    <span>Mes</span>
+    <input type="month" id="mes" name="mes">
+  </label>
+  <input type="submit">
+</form>
 ```
+
+<form action="">
+  <label for="hora">
+    <span>Hora</span>
+    <input type="time" id="hora" name="hora">
+  </label>
+  <label for="dia">
+    <span>Día</span>
+    <input type="date" id="dia" name="dia">
+  </label>
+  <label for="semana">
+    <span>Semana</span>
+    <input type="week" id="semana" name="semana">
+  </label>
+  <label for="mes">
+    <span>Mes</span>
+    <input type="month" id="mes" name="mes">
+  </label>
+  <input type="submit">
+</form>
 
 ```
 <form action="">
-        <label for="calendario">
-            <span>Calendario</span>
-            <input type="datetime-local" id="calendario" name="calendario">
-        </label>
-        <input type="submit">
-    </form>
+  <label for="calendario">
+    <span>Calendario</span>
+    <input type="datetime-local" id="calendario" name="calendario">
+  </label>
+  <input type="submit">
+</form>
 ```
+
+<form action="">
+  <label for="calendario">
+    <span>Calendario</span>
+    <input type="datetime-local" id="calendario" name="calendario">
+  </label>
+  <input type="submit">
+</form>
 
 ---
 ### Autocomplete y require 18/55
@@ -632,3 +669,71 @@ El atributo de submit en input sirve para enviar la información de un formulari
    </main>
 </body>
 ```
+
+<form action="">
+  <label for="nombre">
+    <span>¿Cuál es tu nombre?</span>
+    <input type="text" name="nombre" id="nombre" autocomplete="name" required/>
+  </label>
+  <label for="correo">
+    <span>¿Cuál es tu correo?</span>
+    <input type="email" name="correo" id="correo" autocomplete="email" required/>
+  </label>
+  <label for="pais">
+    <span>¿En qué país vives?</span>
+    <input type="text" name="pais" id="pais" autocomplete="country" required/>
+  </label>
+  <label for="cp">
+    <span>¿Cuál es tu código postal?</span>
+    <input type="text" name="cp" id="cp" autocomplete="postal-code" required/>
+  </label>
+  <input type="submit" />
+</form>
+
+---
+### Select 19/55
+
+```
+<body>
+  <main>
+    <select name="cursos" id="">
+      <option value="JavaScript">JavaScript</option>
+      <option value="HTML5">HTML5</option>
+      <option value="CSS3">CSS3</option>
+      <option value="">Web Standards</option>
+    </select>
+  </main>
+</body>
+```
+<select name="cursos" id="">
+  <option value="JavaScript">JavaScript</option>
+  <option value="HTML5">HTML5</option>
+  <option value="CSS3">CSS3</option>
+  <option value="">Web Standards</option>
+</select>
+
+Se puede hacer un formulario que tenga una lista con cosas para seleccionar con esta etiqueta, pero la mejor manera de utilizarlo no es como se muestra arriba porque en un celular o incluso en una computadora si hay demasiadas opciones puede ser incomodo de seleccionar entre tantas opciones. La mejor manera de hacerlo es como sigue:
+
+```
+<body>
+  <main>
+    <input list="cursos">
+    <datalist id="cursos">
+      <option value="JavaScript"></option>
+      <option value="HTML5"></option>
+      <option value="CSS3"></option>
+      <option value="Web Standards"></option>
+    </datalist>
+  </main>
+</body>
+```
+
+Utilizando la etiqueta `<input list="cursos">` con el atributo list se puede hacer una lista.
+
+<input list="cursos">
+  <datalist id="cursos">
+  <option value="JavaScript"></option>
+  <option value="HTML5"></option>
+  <option value="CSS3"></option>
+  <option value="Web Standards"></option>
+</datalist>
