@@ -25,6 +25,10 @@
     - [Calendar 17/55](#calendar-1755)
     - [Autocomplete y require 18/55](#autocomplete-y-require-1855)
     - [Select 19/55](#select-1955)
+    - [Input type submit vs. Button tag 20/55](#input-type-submit-vs-button-tag-2055)
+    - [¿Qué es CSS? 21/55](#qué-es-css-2155)
+    - [¿Cómo utilizamos CSS?: por etiqueta, selector, class y por ID 22/55](#cómo-utilizamos-css-por-etiqueta-selector-class-y-por-id-2255)
+      - [Cómo utilizar CSS en la hoja de estilos?](#cómo-utilizar-css-en-la-hoja-de-estilos)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -737,3 +741,94 @@ Utilizando la etiqueta `<input list="cursos">` con el atributo list se puede hac
   <option value="CSS3"></option>
   <option value="Web Standards"></option>
 </datalist>
+
+---
+### Input type submit vs. Button tag 20/55
+
+`input` para formularios.
+`<button>` para cualquier otro tipo de boton que necesite en mi proyecto.
+
+```
+<input type="submit" value="Nombre" />
+
+<button type="submit">Que color te gusta?</button>
+```
+
+<input type="submit" value="Nombre" />
+Con el atributo `value` se puede escribir el texto que tendrá dentro el botón de input.
+
+<button type="submit">Que color te gusta?</button>
+
+---
+### ¿Qué es CSS? 21/55
+
+CSS es la herramienta para embellecer nuestro HTML.
+
+<figure>
+  <img 
+  src="https://i0.wp.com/www.silocreativo.com/wp-content/uploads/2018/07/CSS3-modulos.png?resize=602%2C600&quality=100&strip=all&ssl=1"
+  alt="CSS"/>
+  <figcaption>Funcionalidades de CSS1, 2 y 3.</figcaption>
+</figure>
+
+---
+### ¿Cómo utilizamos CSS?: por etiqueta, selector, class y por ID 22/55
+
+`<link>` es una etiqueta que se puede utilizar para enlazar una hoja de estilos de CSS con mi html y es la mejor práctica.
+
+`<style>` es una etiqueta que sirve para agregar CSS dentro del html, no es la mejor práctica, pero se puede usar si son pocas líneas.
+
+`link` y `style` se utilizan dentro del head.
+
+Otra forma de agregar CSS dentro de mi html es en el `<body>` utilizando la etiqueta `<p>` y luego dentro utilizando el atributo `style` en la etiqueta `<p>`.
+
+`<p style="color: red;">Soy un texto</p>` esto se llama estilo embebido. Esta práctica tampoco es la mejor, no es bueno agregarle estilos a una etiqueta porque esto puede reescribir los estilos que tengamos en nuestro archivo CSS.
+
+```
+<style>
+        p {
+            color: blue;
+        }
+    </style>
+```
+
+#### Cómo utilizar CSS en la hoja de estilos?
+
+Hay diferentes formas para utilizar CSS y las iremos enumerando.
+
+1. Escribiendo la etiqueta a la cual queremos cambiarle el estilo.
+
+```
+p {
+    color: blue;
+    font-size: 40px;
+}
+```
+En este caso le dimos estilo a la etiqueta `<p>`.
+
+2. Utilizando el atributo `class` en el html, luego llamamos la clase que creamos en html al CSS.
+
+```
+En el archivo de html:
+<p class="parrafo">Soy un texto</p>
+
+Luego en el archivo de CSS:
+.parrafo {
+    color: red;
+}
+```
+
+3. Utilizando el atributo `id` en el html, luego llamamos el id que creamos en html al CSS.
+
+```
+En el archivo de html:
+<p id="texto">Soy otro texto</p>
+
+Luego en el archivo de CSS:
+#texto {
+    color: yellow;
+    font-size: 24px;
+}
+```
+
+Es importante recordar que ID y class no se tratan de la misma manera, son diferentes.
