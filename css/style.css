@@ -1,0 +1,47 @@
+html {
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(1, 1, 91);
+}
+
+body {
+    background-color: hsl(180, 12%, 79%);
+}
+
+#titulo {
+    color: cyan;
+    font-style: italic;
+    font-size: 40px;
+    font-family: cursive;
+    border-style: outset;
+    border-width: 5px;
+    text-align: center;
+    background-color: darkblue;
+    border-color: cyan;
+}
+
+ul {
+    color: blue;
+    font-family: cursive;
+    font-style: italic;
+}
+
+#frutas {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#carnes {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#verduras {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+}
