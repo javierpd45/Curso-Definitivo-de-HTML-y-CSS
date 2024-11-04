@@ -30,6 +30,7 @@
     - [¿Cómo utilizamos CSS?: por etiqueta, selector, class y por ID 22/55](#cómo-utilizamos-css-por-etiqueta-selector-class-y-por-id-2255)
       - [Cómo utilizar CSS en la hoja de estilos?](#cómo-utilizar-css-en-la-hoja-de-estilos)
     - [Pseudo clases y pseudo elementos 23/55](#pseudo-clases-y-pseudo-elementos-2355)
+    - [Anatomía de una regla de CSS 24/55](#anatomía-de-una-regla-de-css-2455)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -900,3 +901,12 @@ Estilos de la barra de navegación utilizando CSS.
     content: " | ";
 }
 ```
+
+---
+### Anatomía de una regla de CSS 24/55
+
+<figure>
+  <img src="https://lh3.googleusercontent.com/fife/ALs6j_F6rjzbfixDbGVnt8ES9iyyweAEYNxnpGwRAc3X3ehenwTZlSXH9iVTjESGAwWd44ErGUhOqkF2g8ZpLnJyhqjO8GvdjFRy8Y5icWd5TSsPLj0h_yT0pMchZGwT9r4DoI6ac5yqg3yNSBEyTs1M7Gw7077FGryitLWrEtNkPtflthx8r2zj95MMUwPeywB7dHYSx1XlCTRBkYZ6j3tgBUmXJOXDxInlatBMNIiH8u2L1y7l3h-rZOUXrymrMSLWMySiWxqfc6PPLIRhuRP1np6GvW4JWlfIt8xSjFG0AIszBI-IAOsx260VFSZA_8OIph24rqGR8eHAw08bgXQtVWYZAGMEod8s_frt4UMBcch2NMbSYCBjjdIPlCYC1ygf6teY5b0dJL5UdIcB8a13_vPaIpVDko_RAig5O3F3HxmArIBKfDfm4e-nO44Y70Nwka-V8rPnHNRi0PWlUeS_1NVOFP8hMNLiSgCmGaeAPkQBGmj1lkiKxPLJvpsT-o_x6_Z91F7pqAyTunLu3tzQla6U6TERSi0kPsrG8GHgzXeeSj4MpdmTvtSjUUJAfnnGZ5k_UlFaI-V5j4PWn6HXlzRP2mP3BZKAsyVIlVLpdy773Kt0vEIzqNdspi2WRdujMHZzFBx6zzbf0KMhdZlhU1DRaSyAngcI2IAhFpQvq4grfCqkXB0LLYqipmboST-qoCt73Sbr5xtcgLeNN-OqxOPdypXwCCfmm3_UhYw4dMA3-FBEHrYDa2igtWCYOzRrkznxmfBtjiEdtqEr1YRZJMzTMwSJBPP0wWP4FLr6nc6utP3r1cOQUSiH2iu2VQy445tr5Ih1uzAX-STSNx-cBMEFciRnaY46MzCqwSKkls_epA195PmTHVkVpjYQcZYLXexomUy19PL31-1hgxA_lnyGa2BNLZxzpUvwR7ZQ7YYJOM3DBuLVY69GRibDLy2jeiWNKvyNYt2vBiA6ecUfR5c0ZY2VnX_MCryd_gHUUwdwZSL2CHCw6eU7hueLVC2eNCDaC6ndU_iCMfCXsMVy7sKlTK9GJZouqw7d05-9EU07difGL5RuOL4xgtH634Xc0RwkySXiEiY4kfaNpuge7K0W3jyp7z7fywxrUmYorv1xFwTcF1fbiQc9zfTLmjAL4SX-AqXGq1uVrLn55pxQwwxEnJ6IJiA477WC3SBOXMds-ohVNFWFTC0NZ077Maw8GDX7uvyk-iWKH7MnT7p-N81eQVwRqX36Lx9k4qxgmFclLkmAi0FvaiAco_-7AqSeOfTJ37asJNMm3V2hJRFgZPA7KAJ2Mpvtj2nwpKZImP9vAZqtJdiajPz3g-GBX47WzKFtzKqxgaipnCtT279swS2NJMH8urhK-uMhq7mrfXEBDmjCkZuB8boBjVYw6q2wJDqKYbe1iejEHKhb5Hapr-ElopNU8bu1gQ7Botvea5owXqckXIuWJj1xDGB4ce31oifRPhO3thABFMixObt94VRYlr-Cl6sVT6OghIZJ4HHHVT-2URVgBItNtXJPSFPiCQZPhwHQapyIkV0VTCJn2weiKUdFjdSik5YdbbAahK5qFKBjN0390EK3yIrFWv21iJmRBoIIQoZFmRcTzqT3yg=w1920-h945" 
+  alt="Regla CSS" />
+  <figcaption>Sintaxis o Regla de CSS (Imagen en google drive)</figcaption>
+</figure>
