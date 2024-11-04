@@ -29,6 +29,7 @@
     - [¿Qué es CSS? 21/55](#qué-es-css-2155)
     - [¿Cómo utilizamos CSS?: por etiqueta, selector, class y por ID 22/55](#cómo-utilizamos-css-por-etiqueta-selector-class-y-por-id-2255)
       - [Cómo utilizar CSS en la hoja de estilos?](#cómo-utilizar-css-en-la-hoja-de-estilos)
+    - [Pseudo clases y pseudo elementos 23/55](#pseudo-clases-y-pseudo-elementos-2355)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -832,3 +833,70 @@ Luego en el archivo de CSS:
 ```
 
 Es importante recordar que ID y class no se tratan de la misma manera, son diferentes.
+
+---
+### Pseudo clases y pseudo elementos 23/55
+
+**Diferencias**
+
+*Pseudo Clase*: Define el estilo de **un estado** especial de un elemento.
+
+*Pseudo Elemento*: Define el estilo de **una parte** específica de un elemento.
+
+[Standar para nombrar clases en CSS: BEM](https://en.bem.info/methodology/faq/#why-bem)
+
+[Pseudo Clases](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes)
+
+[Pseudo Elementos](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)
+
+Barra de navegación creada con html.
+
+```html
+<header>
+        <nav>
+            <ul class="main-nav">
+                <li class="main-nav__item"><a href="">Home</a></li>
+                <li class="main-nav__item"><a href="">Cursos</a></li>
+                <li class="main-nav__item"><a href="">Instructores</a></li>
+                <li class="main-nav__item"><a href="">Blog</a></li>
+            </ul>
+        </nav>
+</header>
+```
+
+Estilos de la barra de navegación utilizando CSS.
+
+```css
+.main-nav {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0px;
+    background-color: #13a4a4;
+    text-align: center;
+}
+
+.main-nav__item {
+    display: inline-block;
+}
+
+.main-nav__item a {
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+/* Pseudo clase hover se llama con : */
+.main-nav__item a:hover {
+    color: blue;
+}
+
+.main-nav__item a:active {
+    color: red;
+}
+
+/* Pseudo elemento after se llama con :: */
+.main-nav__item a::after {
+    content: " | ";
+}
+```
