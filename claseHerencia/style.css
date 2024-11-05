@@ -5,4 +5,13 @@ html {
 
 h1 {
     font-size: inherit;
+    color: lightgreen;
+}
+
+p {
+    color: lightcyan;
+}
+
+body {
+    background-color: black;
 }

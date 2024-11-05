@@ -33,6 +33,10 @@
     - [Anatomía de una regla de CSS 24/55](#anatomía-de-una-regla-de-css-2455)
     - [Modelo de caja 25/55](#modelo-de-caja-2555)
     - [Herencia 26/55](#herencia-2655)
+    - [Especificidad en selectores 27/55](#especificidad-en-selectores-2755)
+    - [Demo de especificidad y orden en selectores 28/55](#demo-de-especificidad-y-orden-en-selectores-2855)
+    - [Más sobre selectores 29/55](#más-sobre-selectores-2955)
+  - [Malas Practicas](#malas-practicas)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -959,3 +963,170 @@ h1 {
 ```
 
 **inherit**: se utiliza para heredar del padre más cercano que cumpla con la condición, en este la condición es que el padre tenga un font-size y lo hereda de *html*.
+
+---
+### Especificidad en selectores 27/55
+
+**Cómo se controla el orden al declarar CSS?**
+
+Tiene 3 puntos importantes para decidir qué estilos se van a implementar.
+
+1. Importancia.
+2. Especificidad.
+3. Orden en las fuentes.
+
+Si dos declaraciones tienen la misma *importancia*, la *especificidad* de las reglas decidirá cuál se debe aplicar. Si las reglas tienen la misma especificidad, el *orden de las fuentes* controla el resultado final.
+
+***Importancia***
+
+1. Hoja de estilo de agente de usuario (`Estilos del navegador`).
+
+2. Declaraciones normales en hojas de estilo de autor (Nuestro `.css`).
+
+3. Declaraciones importantes en hojas de estilos de autor (utilizar el `!important`).
+
+***Especificidad***
+
+| Selectores    | Especificidad |
+|:-------------:|:-------------:|
+| !important    | 1.0.0.0.0     |
+| Inline styles | 0.1.0.0.0     |
+| #id           | 0.0.1.0.0     |
+| .class        | 0.0.0.1.0     |
+| tag           | 0.0.0.0.1     |
+
+**Inline styles o estilos embebidos**: son malas prácticas.
+
+<figure>
+  <img src="https://lh3.googleusercontent.com/fife/ALs6j_HqaCMpOmItRQmqUhwJkGA6G72346ySxiDkUXnSeN20DnJyQVZGo_CxavaO9ckoQS89bvMPPBFxlBbMdNjdY-nba_UjeNatE2axIEeKNuwhkC8Jei-xZCP2c9Vky7O3NSaUcmmdGLE5IyuJrUtsnSIMtNQrjbhBxilko6Fyd4FY4gqUz92mS59xFC62nODmLaUvsIcJDRH0SNtn7e_Pyi585jqDh2GZxLLP0aQNvwjy9gIZMvPVA3KYyrmp_vH7ysKsnb0sg_Qqx-ijkSHrokp72VQdOW5kXfg-uExP7-llT6DFfUZ1as6i5wVzNBt0Ue8tpTp6CXeS-gZWJqtcl4SSgHPoRce2Txyjo1I95TCuY874i4SIZYWe78zyhLxNgky10c18xGoy4MEeicdfoqQqFrNVDHq4qXyomv_eA_ph7Tg4clLxmZ_kXlEzKrP312iKjKsiW1QVtVGZ3ySDQuGmU96VY9hpSqzokEQ7SgouHx4MWZ6X9I651PY0cjDW-ZVSoI6hKviVFEspEPlxYzd2aHKAbC33kaPcHFLIGb9tubyLuX_2Nn6Qpxl6Jt5UQEAdCrmaWgcYTYGFUHFH-MT8Fw8VPRfh0RtFklXWHO_jo5vNy1f5t_uVpprPbORtIL684jwpoB-A4oYtpPRIe4xneziavcB7X6T4ftRMz7BgWjqY8xzXDLNKVEszu8dq3EJfSfhpNQ-ng410DluPe7G_oigEG7ulMyWoHM0oGBqmSIPvvSIZqfwTAYmbPSnbUZ-Hd4iFsItCI2E7ygKNF_RC-lsfKhX8yB7dRrI1INzSQh-TnzuIZJ0qsGvGEKDVgBK3yacYkSQHDMteRpPWy6l4xMoXEim29NardKFm2HEP4DXIwqVRdXTvvdGGLZM2gOqoOwHcSNN6nJR4iBr6g0T19a4rEOtdgk1u-7s7_l3-d796PqpZW_q78tOUA5aBmMq6YN0c49t-0aDu7szfV1_tqL8Y3JwPBXJUqsCTHA9F2a3FlVUeT5tjyOTRttr6mVhVePo6nYH3LsUWDKHzW2h4a0eThBIwfI8VmitT3L8PA8qTLx3sAneKK0clqXXHZ4t7JZY28tYUZabxXJTFJ4H-RDoJJbu9DFkDMa3zx3OT9SDdInQheLGmo1B_WBhKIDmICdY5N0ErGRoc1dyzD8l_6bB9jtD6V14bl8LGVi-eI3yWLhMuX7ikhgM10-O9K6KijdbW3U-Ha0OncZqj672I1l99zCeJ6V1uctCNq1WeKjEcNolVnKgk2RP0U_RpL2SFQHtS5mTBSQwUqnT4PFeUkz0Zxt5-0lN2Ynbgd-ccBAvcKqiRhqxQzXrr6GBWrZfFy1u842HPQatCe0H6IE1T15NsmmxSOIWTCsBcogu3yoPwleaXXd_QjpRFz6wWRXkxZtjkcfXKuqQZUFVOOqXu5sVghvsYLfAjIXfxNXzXlp3TEbOmqVx_AeM1w-jAP-qfHk6JiN63UBws1Nh2f7w5aAcNSoYJxpjSulnm5gNVeDt0vfJqSwzfINEM4fg2uM3uAu2H58YsoYQJG3Hg1DUhpJQ387IG_dazac8seTaT2aLQN5qFeWz1Y_YLru5ET2hySHRHlrxPrU_Hkjdxhg=w1179-h945"
+  alt="Estilo Embebido en etiqueta">
+  <figcaption>Ejemplo de estilo embebido en una etiqueta de ancla</figcaption>
+</figure>
+
+***Reglas de Cascada***
+
+<figure>
+<img src="https://lh3.googleusercontent.com/fife/ALs6j_HadiIkTkEUN5Jgko3LCsGHZKhcZ9QhPyTxLVs7HqRPjnKl3ISTi9xrWMvJNSwD8uOpXHctJGb9SvUNMdrGlMnqzTlaCw7UGIIQ7fyi0M9qYL27bUeP6XdKU90MIXpS_m7e5TdNUSfiAEovEdbVJxXFK8eH0Xzg6J6W1uIRhl4EA-MfRU11yWyjj96qaN2dBi-uIfIeOLpcgkyTFUmkn6tisPBZnCrOMqtlG0jTBSi5RUs9eMSRabbPag_coj7VzUfqHBDwEBpYMUooHC0RtAFPWk4pDUJrvfrZeUmfMPdxPHjd4QG9dxylxzfmlnuU9PNQirjmr5H050E1DEKmWeAGQmTqy1OMmBCdRPZRY2Z1lx3fOSYmVWMj4crbYiZPJUk7uWmD2arTxt4J9e6aFj7AgpA6-G0UXO9fgOSQfvTxWbgDr_pgQyVVeS8MlwuKSGnvfRIK7Z0Tm8vFt3-acstU6byHLUO17AqdzxU1IGMLjD3Sb0jCGlm6IHByF6AZK584BGm6P12tb65jIPmkEr3ksp65qsJR1qZUavVPAwlHV9vgZQwWMLTjgfEHJqbZ24uu9cDeHvxwzw3vYHpJlsHsMPq_ipYdG4u_K1PP604_VX6flK1ghmcV1rQjcKOzwGiEfh7aErr_mPCiWoaKXpCFt12mOMJWwf7wmyoilYHI7LdM-XbKMZzMrnFaAORKk6ERl-dr79_8OOFIe0OGJqhc_gfrqXqm8IeYyBt_4RD5PdJfku55JipMNd5tXD-WLl4Ei4n8tzSLWfWUFx_I11nDLAiNbxKVvbzxCLuZiJHb96m1oDZ7JR19AiP_3mnE_He0WcepeI2j0TvdSsDzreYR3qZm-536seJ6TSZc1QvwSwJuvtyTapbGNcHMAW35Iv3dJZKnvUaHvygZY1kmOrdFzPxxgH16mpArMe0wigd68I5dSx8RmnwXKHLFHSXPIsz0L_A3p4cZ1GNRZVVqVMkzztdqGxmQO7QIuEjwMsPljnKZL3hv_UxmkG9ZnHxPZR_HnFWeauRoPhZQIDBR5BhV9dhfBF6feB5e5INA0If1KjLQDbriSriMhEv0sKzEcODSgw_l7F5Aw9LBkQks1TvJsfx4lotyvUzyp0u5jIfQpo2lmI8eYTe-UIcoucVi_lIgZX6tbmji3sFnAFYVYGi8SQ8C9w693Y6ZdEdc9aPKSFTrmDQk1_MHTMSVmB9RdMNBKlB3XhycAmIRJDAmX7hq7DCpA08LCE98f4sItPFbhUVr8WR0yan1QfSCRZHbpRx3_ahmUPndWFEddAhRLABBlleaQCOjx6saC9oTJW1lx-RjULOG5rWfzv3OhfRTpuP7NyZ0OF7iWsaTJpF37fYzm2JbMT73UMyJ2ivVuqnZPjgMmN9T7bdbLVsnguQytOK8hqd6hOUJ_cKJy7oGzUO8TaDWnUUnYQr1UJWOFEN6GU17BZuk1y7nr9sFwiHzU9SXzPG5gCKCOwwaJVPrKagI7ZL8KwSv2Pwfyb0j5Asltpd6u8v-YIqQJlZa-UrwfirmGqBOkiAa5t7EDSGc3k6w9ryLIZ1bR9etz5X7birZ-4hdq2FRTTjFQ9Hlg54q9ekT_vGPzNSeauVnW-en9Q=w1920-h945"
+alt="Reglas de cascada" />
+</figure>
+
+---
+### Demo de especificidad y orden en selectores 28/55
+
+<img src="https://lh3.googleusercontent.com/fife/ALs6j_FnK8Rvy2xb-TukS48Yw5U2nb0tLpZ7CrBQEOZuwu-oMv3tMtY18ATkMmE83eotDEDzlOpsjHPN15kot7LpA_qMVze-KS17QqOmj1RUiTeIMxLleSbZIYHIl6G77wusQ8g_67ekBUf86ItAZI9IXiQUPTxmP_UDGzbhuDTqUz2Sb2mzC0ceFnMFZwWXpPK7HWHZmp7BGOXE-JOey7KQOJdLUOW1gy5McyQR2cmb60OyYTw7OSwab76TMQIrakzeUlLe2wtooZbuKUDPjMD9pEYURLAv_b1HAd8YsWJehvnoqaGckITWUyGfyOiaD071TiiCo-9uQDX8sxTtkN-YeoP48Cdt_dQY9SdFkj44qR2L0q_7qOaofRVg9XSpd0J7ioT8wTxb8zksq5JCBra_5YvRd-rjrs_S0jAJnPvHMhPhfI3xWSBkQ86UuBQfLLl9y4dMMUD6FcRQBnBrY5qgEBthMuPHe-D1ZW3q6TqHuBkbEg2lw019R1s7DXOto9sooG0d3UYrhG1iXFwH485jCa7zeIiwjnBZkIBxzRGGm8oLfU9lwFz9wxyOBMEoxZ6tISPxHFCB2o-hPTxD2NK_KgtOmGS29fEK1lLwB2fC0GyvETQTyWsbFQSTOmwnM3cbtwgXSP9EeQc0lWrbJ0w1CAExjNz_WaaqZpOxbs1iGePpsh-pFU3wEC3m9JkDCod_0u_qtRqFwM5SBGsXqx1iz2MJupv-BuAfvXc8wZacjnBK52P89Wm5PcVRNuCNBKOhKR2f-wEPdKaxq5G8HJIMmywqXWdF_c14kOfbU99cKD8pwSHGivxCapmovuLM8wuW86yY4pkprOmVDyZCgDGZhwvCv-srS95whUgLbdKrWd5NaHOPpUywn0KoaJHUBYt1KLuoxACi7ak-r-ENlQHj2aSrpXz87jJNOz3qGtTssxE04uzwpOyFS1rVKyTerv7U26Bwr887OOR9YAFhrujdqtvPuk2Q8sh9U3OFGN-HqK2DfnVEjKH7IMWIpm92Gdl-jD0zVjytizwvCgzQNMcaJfd_kN1lPflsBcET9fAfzpuy3jdQhY3GXbZAhutrxm8iyk1F-qzbAwdXoo-nHiHckbEcXfewd9fzuJ5ejldZz6fc5afihdiKdE-2jETGWhsDE4EUru5p6Od7QoAK0dusM4cC0dImjOv71BCt5rXod8OwH7lMPHVUgoYzOw9jdobArv4UYoInfURj9wI_iFFpY1F4-b4aYAzYY1QLbkz9EQFDs0CGM0VpTARZUQ6-g0xabKr7X6cMccnPn5CFrMfTZBBf_xa0P_Sqqy17YtwgKg50FhQKgB_Ccy_1nys6EZMj2LrWT5YjUT-_x9qEwbMssrOSvIIfec4mDJq9WTZRhO9Za-UIEOLIsowDVLCyQvaD7tZ9puDAQlK72f6M8kj7vGZJW7IgX6Ff4nBq9BH26qxuOS069rnJGm3p3Q1K2prXdfCA_rZM_Ko57LASFuVav3bzi1vsD_lntoho0OfCN0QwPXuQ7_Bt3dbvOnm3fuYCgtLQ5J5lVAKiTgug20TWxaHh2o16ioANQNALMh63RFPzGx8gkYecbCmWRWwHsnnOENKlYGcm-cIivJCxS9vvyg=w1920-h945"
+alt="Especificidad e importancia de los estilos en el navegador" />
+
+El navegador siempre devuelve los estilos de arriba hacia abajo en orde de mayor a menor importancia, los que están tachados es porque no se están tomando en cuenta ya que hay un estilo con mayor grado de importancia en la parte superior. como se ve este es el caso de que un ***#id*** es más importante que una ***.clase***, eso hace que los estilos de la clase sean menos importantes para el navegador.
+
+```html
+<body>
+    <header class="page-header">
+        <h1 id="page-title" class="title">Empresa</h1>
+        <nav>
+            <ul id="main-nav" class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Cursos</a></li>
+                <li><a href="">Instructores</a></li>
+                <li><a href="" class="blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+```
+
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: purple;
+    font-family: serif;
+    margin-bottom: 10px;
+}
+
+#page-title {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+#main-nav {
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#main-nav li {
+    display: inline-block;
+}
+
+#main-nav a {
+    color: white;
+    background-color: #13a4a4;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+#main-nav .blog {
+    background-color: red;
+}
+```
+
+**Nota**: utilizar mucho #id en css no es una buena práctica, la buena práctica es utilizar clases y otros selectores.
+
+---
+### Más sobre selectores 29/55
+
+Utilizando !important como demostración, es más importante que un estilo embebido (inline style):
+
+```html
+<a href="" style="background-color: orange;" class="blog">Blog</a>
+```
+
+```css
+#main-nav .blog {
+    background-color: red !important;
+}
+```
+
+El editor ayuda con la especificidad.
+
+<figure>
+  <img src="https://lh3.googleusercontent.com/fife/ALs6j_FHVO_kkgKAIasYvTpvSIPudoSnCWpZM0LXEpv4unq-BWJ6YZSn_8lWrs4lTURMT4Kymp3I1a5YcPGVHe_Sxy-ikNBhGPtlc1BX2qhspX82qbifBMU5zeUcEZ3W7YtVgc555yMYDoBHxPkQ0HJP1mobAmni54p8AU117flz03QpE8VInc35IYrzl5aAelZPoM_MGVYMHZC5Kc_x_-5QqfOZfIhEmvW-LK0YgflizmRZf_ySWSXqChHMRQh3TRw_c1N23VP2xmFA9h1GwZvOKhB-oswzwGFtOchYZ59Bv4XtDm7OBk9CxcOAG76Xr1dLPShTmNKxKkpLRVL4KGCk2A6arw9_BqAGx6FFjQQZ9IHPD6MKdDO0Qb9Eu280yZU2l2UcpniJgS1hMZkwCvrVafixhd0yywabNOnqkTOIA8PxlKvOIl4PxXJKG0RgO3CHIdH8vGN4n-e5ElP4iOn0NQ7sTO7jLIUoQA2tThW-qNu1uAr3uFaEbZPx4i_7wEagq737oNwhl5d2Y_VvCNSmV7QwM04FRpHDbBCSmToVuLZ0O42FoQK6VLYKvKYXJajjgw-DCj01opP0GMePaxZxqPUDxz-ZL9qx9eU6LfUCsGeC_rqrtsBlf11bIxmtvgu1SVG4jRPjOqZ-5v1RL8_ERrxJpouCWjH40vDdX2U30cwBi6xBIkrJEJF7N-dlIwvwAdGDwsnbAdBhBvYlSgejWh1tMjX_HdoUEoXTspFq24lR5FhidRQbPPDK87Pamls7S_Q7Sjln7_MbYCF_bJv9cmWvtEfytyJIT5DrQg6mvZdEozbpZq-oNj8kqPGPYPeuphlOSrF3s16E3Rual4ek6JIJOa_b-yvRsk29oxX4dJRTi-PpPlX5Z8_n8zOSBg8UrMZR0Gx7vOrihJbuhCiiGx1d-WDT0PlzBvkjcgWugfcs4rhJ-rOeFoN5nyINyT5RnR75EBs3Tt6oC7IbNHb1HmINjv4ML4q5k0oIIUzRvvDyOk-54wN1xq2eyBm_I3FZWTqC4q5tJJXklZnqmX5j9hO0irCq14Td-67p9fHSJdGUgL1C-fJT8DVkR4ruxxd6yo1LK30NoSD3g60ho4FeJ9FmghDVLbaXdSwjbfRVeCZE5sRcXU8176_XBEn0La-cJpGgxU86KPFXMc14BHudRQlViJIIZlsBIldEObN4PSVUmEWTjtxN_v5Hjy7g0Jmgq3rc-yQt04FlOKFxCza_Hd2zaxt9kMUxtu5PBIzGzxRjd5c9sueHugGQUgzGmEPuMRSAx442wXtpbon2ISos0d8V9rvhyEyp57alZSvoZvs7s4upaITD1-nzjk1muSF8UMX-Q9e5AISvfJSnSkkz2JBa4ED-DjpYwdNtmtWUtuq_NGkKaRGy4auFb4Ej4V-vCJ1iWPEwIJfnXIX3cJA0zce_XRHP16w_mU7UdLne_brpGN2q-8kRst9lmw98BpFgEjhLO7zEwPVPQdjDZPv5STwDre2PdTfh5pZgMhVzYGSvXevifvLCmIa56wnUdIahDWo7xxeDQVrD8kCMQEmbpVkAK55x-r8kq-NIJtvmF5yTRlnZ9QiDk77X6Nhlc9xVapU2etmIiSO6CeviTJQ=w1179-h945"
+  alt="Especificidad en editor de codigo">
+  <figcaption>(0, 2, 0) 0 id, 2 clases, 0 etiquetas</figcaption>
+</figure>
+
+---
+## Malas Practicas
+
+* Utilizar id en CSS ya que es de una prioridad muy alta y puede causar conflictos en css.
+* Utilizar el !important
+* Utilizar la etiqueta `<style>` dentro del archivo html
+* Utilizar el atributo `style` dentro de las etiquetas html
+* Utilizar `div` para contener todo ignorando los `header`, `nav`, `section`, `article`, etc
+* No utilizar la etiqueta `<form>` para hacer formularios
+* Utilizar las etiquetas `<select>` para hacer selectores o menús desplegables
+* No nombrar el primer archivo html del proyecto como index.html
+* No tener archivos .css para cada pantalla de un proyecto
+* Tener todo el css junto en un solo archivo
+* No ponerle el atributo `alt` a una imagen
+* Poner imágenes dentro de `<div>` en vez de `<figure>`
+* Utilizar textos solo en mayúscula en HTML, en vez de utilizar el atributo de CSS, text-transform, con el valor uppercase. Ya que al hacer esto pareciera que estuvieras gritando.
+* Poner videos que se reproduzcan solos.
+* No optimizar las imágenes.
+* No tener cuidado de cual es el formato ideal para las imágenes y su respectivo peso.
+* No tener cuidado con la respectiva semántica de HTML, y con la sintaxis adecuada para CSS.
+* No cerrar las etiquetas que se cierran en sí mismas como `<br/>`
+* No comentar partes esenciales de tu código.
+* No poner la etiqueta `<meta name=”robots” content=”index,follow”>` en tu proyecto para que los navegadores los puedan ubicar mejor.
+* No usar la etiqueta `<meta name=”viewpor” content=”width=device-width, initial-scale=1.0”>` para hacer tu proyecto responsive.
+* No poner el atributo `autocomplete=”valor”` en los campos de tu formulario para hacerle la vida más fácil al usuario
+* No usar el atributo `required` en los campos obligatorios de tu formulario como una primera capa de seguridad
