@@ -36,7 +36,10 @@
     - [Especificidad en selectores 27/55](#especificidad-en-selectores-2755)
     - [Demo de especificidad y orden en selectores 28/55](#demo-de-especificidad-y-orden-en-selectores-2855)
     - [Más sobre selectores 29/55](#más-sobre-selectores-2955)
-  - [Malas Practicas](#malas-practicas)
+    - [Combinadores: Adjacent Siblings (combinators) 30/55](#combinadores-adjacent-siblings-combinators-3055)
+    - [Combinadores: General Sibling 31/55](#combinadores-general-sibling-3155)
+    - [Combinadores: Hijo y Descendiente 32/55](#combinadores-hijo-y-descendiente-3255)
+  - [Extras y Malas Prácticas](#extras-y-malas-prácticas)
 
 ---
 ### Qué aprenderás sobre HTML y CSS 1/55
@@ -1105,12 +1108,127 @@ El editor ayuda con la especificidad.
 </figure>
 
 ---
-## Malas Practicas
+### Combinadores: Adjacent Siblings (combinators) 30/55
+
+<figure>
+  <img src="https://lh3.googleusercontent.com/fife/ALs6j_EST55recz_u-O14QnIN9gcSEo8Dk_XoSq0usemrX1e4z26GLRsEFVnsf6YT065WuTDNqe9eafxVv7T7tGIgiNip4k_n9mlogKYniQ5y71LEKVhVDNtopp57rLTAw5FTBwHXTHsoPGhFWiiD3Nt8ND5wh-U35ADRcZiMWeq5QiUKPY4gHXwbMnZaHH6W7RlEAzgVBV6evm-wYHLGLPmjf1y_meM5etYz1Y83mRS7oDfNbk9DPuhjBW92HEfS9Jj0H5HtXMrV_4JAG7BFs71UUgpHhdWOfgwmU7nGrkubDxjKyZvDuGIMyFau3qvmjj7_B0p9Ons0Aw0wiX_uSFzfi302klmFZlw_bND-tWyL-ytz50mlHaRFk4kl_87jGtAD-m1kpmLfx2XUDy8N35grgNAgm3mCVmKr89DtW-9bVthaVExTf0IYbYp2kkK3WKhd3dEfsfdBiaffNQah3YMF-2WqJEG-ewCqvDMprzGs7tNF6D5YOiHxxsWYQ92lQ5dEgfA4dua7ZOXw_3Ed7hbEQp893hWY15dZyIgFwToE0HL_7xbUEvfYxvQbicVuwTw0VrZSdYuhAkbGGGzEukgNc-9K_im1iGiNJYuCBE9xRoAuoyals6pD6LMm810mhnwKGgoEPQ664sU86mndpZ5bD8jaRp-_URhWUQ1m4YNpaEbvJg0Us7_NByJ3sKxRhcWBitogQTy15TIjx2bo_tSVSmmpIODtl1XPa95LapwZ4tk8c6lrTT2FUN8OXqWVS7aU-94ygGDaJ5Z9MHF6y7sBNFHNfbCHdwGHOHkcvJ_NyeXDmTsg-K-YHWJSgqTTr4WzTkQZ0YM2rk9tOEuy1oF23cccrC-t1hQDRXfJpYaXCIdFZBXgkaIWTIioZrZ1sFKd4nJHgMqAA6XO1qyNoT3QGxzoZYMPwWakZdpLVb2Zv2mJMPRAQJ9UEMN6XBHl2JgaU1kO-by3EelyC1zf1vBdYnXlFXao-PRzYmyhPA1YwpezcAj1eT_1phQ6QsOvP9WaK9wid_NHrNBAHG57Giv8__mR5dBDL3__5igeGa6hDyIzfXBd4_JN6KTbXF8IE6W0M-ppIx_YX-jO-w6owUryJP8JfAuZzx0NU6LroOoEMGvFrTE8UalNE3eLhi9YctalhQN-0T_JjYqhqzgXVuk2iebB43Md-eLxj6fCBXAp2Neu8pSWE3Dl2wBf5uaoAvq2UisZJ81Lvhm03st0td8kgyZcL291SgIkkUKx7l8bY9TgdPmTCquXmuQMgS9S9psUxigzIPFJjn4zkk4ZiJa1bYGz2AvTtfAWnJ-aCE7EC-6JfmIj8gpk941Wkff8RfY0ckOEtwYXgWCyXxbAeVtwZlnV5460Nrqv7yTNZE434kZHCOXAiOY-EgHWJLSaBJIwMQ63s8f9iwFJnf71WTKKKM0-Oc8YgQtOsHulcBRfWCjBVxO3hEiuMRP7kGh-HpUNMc2GltdN7Noq2x1GXOYFEf0QlIe76zTjgJmxDhsOUOkVIUk-bj6FCAyqTK2y4wZq3myXG9tLN9UB5yhYChWrJAwP3kVAQl271u05HduU7eU2J5NhCtilwcPTpmb3sYiskzd16qtam24vpvO8-EeTg=w1154-h945"
+  alt="Combinadores CSS">
+</figure>
+
+```html
+<body>
+    <div>
+        <h2>Soy un h2</h2>
+        <p>Soy un p</p>
+        <h2>Soy un h2</h2>
+        <h3>Soy un h3</h3>
+        <p>Soy un p</p>
+        <h2>Soy un h2</h2>
+        <p>Soy un p</p>
+    </div>
+</body>
+```
+
+```css
+/* Adjacent Sibling */
+h2 + p {
+    color: red;
+}
+```
+
+El **Adjacent Sibling** (hermano cercano) aplica los estilos a las etiquetas p que esten cerca de las h2, solo de arriba hacia abajo si una p tiene una h2 arriba entonces se aplica, si una p tiene una h2 abajo y no arriba, entonces no se aplica.
+
+---
+### Combinadores: General Sibling 31/55
+
+```html
+<p>Soy un p</p>
+<div>
+    <h2>Soy un h2</h2>
+    <p>Soy un p</p>
+    <h2>Soy un h2</h2>
+    <h3>Soy un h3</h3>
+    <p>Soy un p</p>
+    <h2>Soy un h2</h2>
+    <p>Soy un p</p>
+    <div>
+        <p>Soy un p</p>
+    </div>
+</div>
+<p>Soy un p</p>
+```
+
+```css
+/* General Sibling */
+h2 ~ p {
+    color: red;
+}
+```
+
+El **General Sibling** (hermano general) básicamente aplica los estilos a todas las etiquetas que esten dentro de un mismo bloque o línea, por eso no se aplia a ninguna de las etiquetas `p` que no estan dentro de la etiqueta div que tiene los `h2`.
+
+---
+### Combinadores: Hijo y Descendiente 32/55
+
+```html
+<div>
+    <article>
+        <p>Soy un texto</p>
+    </article>
+</div>
+<div>
+    <article>
+        <p>Soy un texto</p>
+    </article>
+    <section>
+        <div>
+            <p>Soy un texto</p>
+        </div>
+    </section>
+    <p>Sou un texto</p>
+</div>
+```
+
+```css
+/* Child */
+div > p {
+    color: red;
+}
+```
+El combinador **Child** (Hijo) funciona en las etiquetas que son ***Directamente Hijos*** de la etiqueta padre, en el ejemplo tenemos una etiqueta padre `div` y una etiqueta hijo `p`.
+
+```css
+/* Descendant */
+div p {
+    color: purple;
+}
+```
+
+El combinador **Descendant** (Descendiente) aplica el estilo a todas las etiquetas que esten dentro de la etiqueta padre, en este caso la etiqueta padre en `div`.
+
+<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators"
+target="_blank">Combinators</a>
+
+<a href="https://flukeout.github.io/"
+target="_blank">Juego de Combinators</a>
+
+---
+## Extras y Malas Prácticas
+
+**Extras**:
+
+<a href="https://docs.moodle.org/405/en/HTML_entities"
+target="_blank">HTML Entities</a>
+
+<a href="https://www.w3schools.com/tags/tag_a.asp"
+target="_blank">Tags</a>
+
+<p><b>Malas Pr&aacutecticas en CSS y HTML:</b></p>
 
 * Utilizar id en CSS ya que es de una prioridad muy alta y puede causar conflictos en css.
 * Utilizar el !important
-* Utilizar la etiqueta `<style>` dentro del archivo html
-* Utilizar el atributo `style` dentro de las etiquetas html
+* Utilizar la etiqueta `<style>` dentro del archivo html (Estilo interno)
+* Utilizar el atributo `style` dentro de las etiquetas html (Estilo embebido o inline)
 * Utilizar `div` para contener todo ignorando los `header`, `nav`, `section`, `article`, etc
 * No utilizar la etiqueta `<form>` para hacer formularios
 * Utilizar las etiquetas `<select>` para hacer selectores o menús desplegables
