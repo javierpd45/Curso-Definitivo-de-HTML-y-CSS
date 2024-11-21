@@ -39,6 +39,7 @@
     - [Combinadores: Adjacent Siblings (combinators) 30/55](#combinadores-adjacent-siblings-combinators-3055)
     - [Combinadores: General Sibling 31/55](#combinadores-general-sibling-3155)
     - [Combinadores: Hijo y Descendiente 32/55](#combinadores-hijo-y-descendiente-3255)
+    - [Medidas 33/55](#medidas-3355)
   - [Extras y Malas Prácticas](#extras-y-malas-prácticas)
 
 ---
@@ -1211,6 +1212,21 @@ target="_blank">Combinators</a>
 
 <a href="https://flukeout.github.io/"
 target="_blank">Juego de Combinators</a>
+
+---
+### Medidas 33/55
+
+<figure>
+<img src="https://lh3.googleusercontent.com/fife/ALs6j_Fs9SzaIG8DDKP17Iyc37kd5MHE8hz1omjyuHQAGg_FgGaYwXpXmO1on5Qzvg7RMBIi2Va-HmnqlsVrdloehLjB2v0x_7EPuZacczk3VGxc-nkDcpKycBOd-zzgUYdMbY5IZHGyYM0C5a8Nwj4Su0wueGzWmy-ph0znWyc5vV56m3W2M7WOch9fxH1GKf6W2dhuJwpllxzwiYQN-p161kVcOUjD7MYCObRDaRhQNzVrIxYG1XcQtW58-oX2TEWNus7hnFbwhW_CDTF8mnDI4lnt8ztdHWhdPPx57_3Z6P1R7ZhFlHZ9P6kXzJ5ES5LaFpHXgcKmpzR98yBk8BIpu3bJnkYOlx5h-nmPJnCdw0d6Hs5wF4bgn98d1rDHA13qPXFWTVdHibq6zG3oOaOxryVn9Uez8NG-SDmoBK5U9y3TMusKVK8d5q7eiimqeCc1heSqAcVEvbLhl-wgJ4SUeJiQ_PDg4XOKJOrI5tF9su6DPWOkzzAZo2xFC7Oi-fb4T_YPwdBzfu4iGuGUwzKFZIyAsRIuu3679QJXDAD-U1VnY8lRZhKc9Tp5szLblus4fFTswUxbWDCnDNlD-ZcemqBB0GH2k0YHbsav-2iHbDs0UqylbsXGlkeFF9rdMJE4X9stHZyShdaBigyN4ZxG4Xe4WYkLCVQBR5FrFl9cuhUwuqdaV7NW8kRaMGDNtew_sFeJJpQJkfZNmtOYtJb05Unj-6_AkUL8LtivDwHgBA4C171AtGUrMgTa3QcZjmkFvSOyV_TNKUFSbS3M_uc9oYtn2U47pW9jXxKxd_cgn8IkD7w7astxA_Lmu79KZD-KlqxWUKKYntYQ_ywEVCil2Js5uosIlktn8RHVIDStpRQQ8_rDiFy6Z65DfTxkMRd3OJU7pI1NLbbiYQMJHG8EPen6XNsTqRlFR10GrHm_pZOx3Ouge-h9CyuwkgMf6Ntm8420ZhkUbdCUPjBIOA5IY2EglbtK3A_8p5jC1TOJQ0-1-eNniRuraSGj9ZDw81Zk72FS--FxQv_COnQJv60_Gl6Yt2nKgmODbs8eTz1ns7sykMEi193rLEyoPG2ncWgI29HjLIkCoZEeEG_doaME7Sqn1CuoJF4Wl1abjcQnwUsBquY5d0x1eKhh2GgF4B9zfrT-jCEBDDsL8yb87UGGjufxN0ysnUFnS6ttsgs6ANsl5rkLKb4tvrkeoVekumthY_qgjJy8V-TpmStw9qQJRGrpoRkf8EKCf7ZP52hRnPW93TZpVPuWbt2SkSAM1X-8jPBggmpTOtu2ENatKWAGO1OTUcWBr2JF5-HzsSkSdgrtinK9MiUZShxNdpcklCB0ZzU-knjxEdOdVxmD0glhqosezgBuVBshG7_gBmjWB5uin1sCECCyPoqxplqoej0IouQbzn_JSdNA8MW8EYH-10HnevmIXw2oqnq2hOTIVxN5kFxQd70TLEnZljI6kNR2DOOLel79OUroF5VFpOncX0FqOOxSTW9mWu3q_UJdCMCAx7F1L_4dPEDPkKZWbHtbO-ZjkRMACOYRhEEJhGjZnD6cqX2wGXLsgte699pH3K5arq21PwZb9sSfTRcPB_zLhBRZzswl0aeyhMaqGDP_8g=w1154-h945"
+alt="Medidas-CSS">
+<figcaption>Medidas Absolutas y Relativas</figcaption>
+</figure>
+
+Cuando hay que hacer scroll lateral por ejemplo, a eso se le llama ***overflow*** y es una mala práctica, por eso se trabaja con medidas relativas.
+
+Medida absoluta: el valor de este no cambia y siempre sera el mismo asi la pagina cambie su tamaño, las medidas absolutas son: mm = milimetros cm = centimetros in = pulgada pc = picas px = pixel.
+
+Medidas relativas: estas medidas heredan el tamaño o se basan en algun tamaño que se haya seleccionado y el valor irá cambiando segun si la pagina cambia de tamaño, las medidas relativas son : % em rem.
 
 ---
 ## Extras y Malas Prácticas
